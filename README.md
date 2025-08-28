@@ -40,14 +40,14 @@ from mcp960x import MCP960X
 scl_pin = 5                                                      # I2C-compatible SCL pin
 sda_pin = 4                                                      # I2C-compatible SDA pin
 i2c = SoftI2C(scl=Pin(scl_pin), sda=Pin(sda_pin), freq=20_000)   # initialize I2C bus
-tc = MCP960X(i2c)                                                # default = type K thermocouple
+tc = MCP960X(i2c)                                                # instantiate TC (default = type K thermocouple)
 
 if 0x67 not in i2c.scan():                                       # device detection check (default address = 0x67)
     raise ValueError("MCP960X not found at address 0x67. Check wiring, pull-up resistors, and address.")
 
 temps = tc.read_temperatures()                                   # reads temperatures in °C
-temp_c = temps ['T_H']                                           # Hot-junction temp in °C
-print(f"temp_c: {temp_c}")
+temp_c = temps['T_H']                                            # Hot-junction temp in °C
+print(f"temp_c: {temp_c}")                                       # print temperature (°C) to the Shell / terminal
 
 # temp_cj = temps['T_C']                                         # Cold-junction temp in °C
 # temp_delta = temps['T_delta']                                  # delta temp Hot-junction - Cold-junction (°C)
