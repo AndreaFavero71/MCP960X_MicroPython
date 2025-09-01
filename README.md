@@ -2,7 +2,13 @@
 A MicroPython library for the MCP9600 and MCP9601 thermocouple amplifiers, communicating via the I2C bus.
 <br><br><br>
 
+## Motivations for this library
+While experimenting with existing MicroPython libraries, I encountered several issues.<br>
+After spending considerable time cross-checking the MCP960X datasheet to resolve these issues, I decided it would be more effective to develop a new library from scratch.<br>
+*Note: it’s also possible that I didn’t use the existing libraries correctly.*
+<br><br><br>
 
+## Common boards using MCP9600 or MCP9601
 Among other boards, the MCP9600 and MCP9601 chips are used on the following Adafruit boards:
 ![title image](/pictures/mcp9600_mcp9601.jpg)<br>
 <small>Product images courtesy of [Adafruit](https://www.adafruit.com)</small>
@@ -118,7 +124,7 @@ Other relevant documents from Microchip and Adafruit can be found in the [docs](
 
 ## Feedback & contributing
 Found a bug, have a suggestion for an improvement, or want to share your project using this library? Your feedback is welcome!<br>
-Open an [Issue](https://github.com/AndreaFavero71/MCP960X_MicroPython/issues) on GitHub to report bugs or request new features.<br>
+Open an [Issue](https://github.com/AndreaFavero71/MCP960X_MicroPython/issues) on GitHub to report bugs.<br>
 Submit a [Pull Request](https://github.com/AndreaFavero71/MCP960X_MicroPython/pulls) directly if you'd like to contribute code.
 <br><br><br>
 
